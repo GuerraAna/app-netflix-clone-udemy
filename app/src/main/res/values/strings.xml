@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NetflixCloneUdemy</string>
+    <string name="app_name">Netflix</string>
+    <!--String Login-->
+    <string name="et_login_email">Email</string>
+    <string name="et_login_senha">Senha</string>
+    <!--String-->
 </resources>

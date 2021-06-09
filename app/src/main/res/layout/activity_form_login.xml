@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormLogin">
+    tools:context=".FormLogin"
+    android:orientation="vertical"
+    android:background="@color/black">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Toolbar
+        android:id="@+id/toolbar_login"
+        android:paddingStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:navigationIcon="@drawable/ic_netflix_official_logo"/>
+
+    <EditText
+        android:id="@+id/et_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
+        android:hint="@string/et_login_email"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/edit_text_login"/>
+
+    <EditText
+        android:id="@+id/et_login_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
+        android:hint="@string/et_login_senha"
+        android:textColorHint="@color/white"
+        android:maxLines="1"
+        android:inputType="numberPassword"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/edit_text_login"/>
+
+</LinearLayout>
