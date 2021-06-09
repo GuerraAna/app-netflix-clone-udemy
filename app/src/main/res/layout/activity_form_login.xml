@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FormLogin"
     android:orientation="vertical"
     android:background="@color/black">
 
     <Toolbar
         android:id="@+id/toolbar_login"
-        android:paddingStart="20dp"
+        android:paddingStart="130dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:navigationIcon="@drawable/ic_netflix_official_logo"/>
@@ -19,7 +19,7 @@
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="130dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:padding="20dp"
@@ -46,5 +46,54 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:background="@drawable/edit_text_login"/>
+
+    <Button
+        android:id="@+id/bt_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_entrar"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/red"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_mensagem_erro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_mensagem_erro"
+        android:textColor="@color/text_view_error_color"
+        android:textSize="18sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_recuperar_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_recuperar_senha"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_novo_por_aqui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_novo_por_aqui"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

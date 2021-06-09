@@ -11,4 +11,5 @@
     <color name="red">#FF0000</color>
     <!--Login Layout Colors-->
     <color name="shape_color">#484848</color>
+    <color name="text_view_error_color">#FF9800</color>
 </resources>

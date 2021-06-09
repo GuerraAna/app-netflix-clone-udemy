@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Netflix</string>
     <!--String Login-->
-    <string name="et_login_email">Email</string>
+    <string name="et_login_email">Email ou numero de telefone</string>
     <string name="et_login_senha">Senha</string>
+    <string name="tv_mensagem_erro">Desculpe, coloque o seu e-mail.</string>
+    <string name="bt_entrar">Entrar</string>
+    <string name="tv_recuperar_senha">Recuperar senha</string>
+    <string name="tv_novo_por_aqui">O acesso esta protegido pelo Google reCAPTCHA para garantir que voce nao e um robo. Saiba mais.</string>
     <!--String-->
 </resources>
