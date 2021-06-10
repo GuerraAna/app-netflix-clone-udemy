@@ -3,7 +3,9 @@ package br.com.netflixcloneudemy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import br.com.netflixcloneudemy.databinding.ActivityFormLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class FormLogin : AppCompatActivity() {
 
@@ -16,10 +18,62 @@ class FormLogin : AppCompatActivity() {
 
         supportActionBar!!.hide()
 
+        abrirCadastro()
+
+        val entrarNetflix = binding.btEntrar
+        entrarNetflix.setOnClickListener {
+            val etEmail = binding.etLoginEmail.text.toString()
+            val etSenha = binding.etLoginSenha.text.toString()
+            val tvMensagemErro = binding.tvMensagemErro
+
+            if(etEmail.isEmpty() || etSenha.isEmpty()) {
+
+                tvMensagemErro.setText("Preencha todos os campos")
+
+            } else {
+
+                loginNetlfix()
+
+            }
+        }
+
+    }
+
+    private fun abrirCadastro() {
         val textCadastro = binding.tvNovoPorAqui
         textCadastro.setOnClickListener {
+
             val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
+
         }
     }
+
+    private fun loginNetlfix() {
+        val etEmail = binding.etLoginEmail.text.toString()
+        val etSenha = binding.etLoginSenha.text.toString()
+        val tvMensagemErro = binding.tvMensagemErro
+
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail, etSenha).addOnCompleteListener {
+            if(it.isSuccessful) {
+
+                Toast.makeText(this, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
+                abrirListaFilmes()
+
+            } else {
+
+                tvMensagemErro.setText("Erro ao logar o usuario, tente novamente.")
+
+            }
+        }
+
+    }
+    private fun abrirListaFilmes() {
+
+        val intent = Intent(this, ListaFilmesActivity::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
 }
