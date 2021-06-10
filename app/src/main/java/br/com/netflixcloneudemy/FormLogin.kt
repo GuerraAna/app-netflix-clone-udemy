@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import br.com.netflixcloneudemy.databinding.ActivityFormLoginBinding
+import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 
 class FormLogin : AppCompatActivity() {
 
@@ -17,6 +19,8 @@ class FormLogin : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar!!.hide()
+
+        verificaCadastroUsuarioAtivo()
 
         abrirCadastro()
 
@@ -61,19 +65,34 @@ class FormLogin : AppCompatActivity() {
                 abrirListaFilmes()
 
             } else {
-
-                tvMensagemErro.setText("Erro ao logar o usuario, tente novamente.")
+                val erro = it
+                when {
+                    erro is FirebaseAuthInvalidCredentialsException -> tvMensagemErro.setText("Email ou senha errados, tente novamente.")
+                    erro is FirebaseNetworkException -> tvMensagemErro.setText("Sem conexao com Internet")
+                    else -> tvMensagemErro.setText("Erro ao logar o usuario, tente novamente.")
+                }
 
             }
         }
 
     }
+
     private fun abrirListaFilmes() {
 
         val intent = Intent(this, ListaFilmesActivity::class.java)
         startActivity(intent)
         finish()
 
+    }
+
+    private fun verificaCadastroUsuarioAtivo() {
+        val usuarioCadastrado = FirebaseAuth.getInstance().currentUser
+
+        if(usuarioCadastrado != null) {
+
+            abrirListaFilmes()
+
+        }
     }
 
 }
