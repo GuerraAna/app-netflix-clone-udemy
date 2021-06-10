@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1068863200194",
+    "project_id": "netflix-clone-udemy",
+    "storage_bucket": "netflix-clone-udemy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068863200194:android:566b12fe0a89a9a52bd45b",
+        "android_client_info": {
+          "package_name": "br.com.netflixcloneudemy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068863200194-fbkkg7id8hlqap9ikujfvs4pttjcvmsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf-Qypoc-Me0uLw7sYLDaU3G6Gosq3Kgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068863200194-fbkkg7id8hlqap9ikujfvs4pttjcvmsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
