@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FormLogin"
     android:orientation="vertical"
     android:background="@color/black">
@@ -19,7 +19,7 @@
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="105dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:padding="20dp"
@@ -61,12 +61,11 @@
         android:layout_marginTop="20dp"
         android:padding="15dp"/>
 
-
     <TextView
         android:id="@+id/tv_mensagem_erro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tv_mensagem_erro"
+        android:text=""
         android:textColor="@color/text_view_error_color"
         android:textSize="18sp"
         android:layout_marginStart="25dp"
@@ -88,10 +87,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_novo_por_aqui"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_acesso_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_acesso_google"
         android:textSize="15sp"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_gravity="center"/>

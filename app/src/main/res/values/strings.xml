@@ -3,9 +3,14 @@
     <!--String Login-->
     <string name="et_login_email">Email ou numero de telefone</string>
     <string name="et_login_senha">Senha</string>
-    <string name="tv_mensagem_erro">Desculpe, coloque o seu e-mail.</string>
     <string name="bt_entrar">Entrar</string>
     <string name="tv_recuperar_senha">Recuperar senha</string>
-    <string name="tv_novo_por_aqui">O acesso esta protegido pelo Google reCAPTCHA para garantir que voce nao e um robo. Saiba mais.</string>
-    <!--String-->
+    <string name="tv_acesso_google">O acesso esta protegido pelo Google reCAPTCHA para garantir que voce nao e um robo. Saiba mais.</string>
+    <string name="tv_novo_por_aqui">Novo por aqui? Inscreva-se agora.</string>
+    <!--String Cadastro-->
+    <string name="tv_primeira_informacao">Informe seu email e senha para iniciar a sua assinatura</string>
+    <string name="tv_criar_conta">Crie sua conta.</string>
+    <string name="et_email_cadastro">Email</string>
+    <string name="et_senha_cadastro">Senha</string>
+    <string name="bt_cadastrar">Cadastrar</string>
 </resources>

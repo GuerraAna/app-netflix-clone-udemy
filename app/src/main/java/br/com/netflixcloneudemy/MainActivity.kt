@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
               startLogin()
         }, 2000)
     }
-
     fun startLogin() {
         val intent = Intent(this, FormLogin::class.java)
         startActivity(intent)
