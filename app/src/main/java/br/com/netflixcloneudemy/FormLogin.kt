@@ -16,11 +16,10 @@ class FormLogin : AppCompatActivity() {
 
         supportActionBar!!.hide()
 
-        val buttonLogin = binding.btEntrar
-        buttonLogin.setOnClickListener {
+        val textCadastro = binding.tvNovoPorAqui
+        textCadastro.setOnClickListener {
             val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
         }
-
     }
 }
