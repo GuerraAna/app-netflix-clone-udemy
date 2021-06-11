@@ -13,4 +13,6 @@
     <string name="et_email_cadastro">Email</string>
     <string name="et_senha_cadastro">Senha</string>
     <string name="bt_cadastrar">Cadastrar</string>
+    <!--String Menu Lista Filmes Netflix-->
+    <string name="menu_netflix_deslogar">Deslogar usuario</string>
 </resources>
