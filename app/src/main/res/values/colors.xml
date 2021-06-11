@@ -14,4 +14,6 @@
     <color name="text_view_error_color">#FF9800</color>
     <!--Cadastro Layout Colors-->
     <color name="gray">#B8B8B8</color>
+    <!--RecyclerView Layout Colors-->
+    <color name="ligth_black">#121212</color>
 </resources>

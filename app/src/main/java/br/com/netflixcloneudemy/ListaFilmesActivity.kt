@@ -20,11 +20,9 @@ class ListaFilmesActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
         val inflateMenu = menuInflater
         inflateMenu.inflate(R.menu.lista_filmes_menu, menu)
         return true
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

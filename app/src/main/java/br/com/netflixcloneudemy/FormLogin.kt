@@ -31,13 +31,9 @@ class FormLogin : AppCompatActivity() {
             val tvMensagemErro = binding.tvMensagemErro
 
             if(etEmail.isEmpty() || etSenha.isEmpty()) {
-
                 tvMensagemErro.setText("Preencha todos os campos")
-
             } else {
-
                 loginNetlfix()
-
             }
         }
 
@@ -46,10 +42,8 @@ class FormLogin : AppCompatActivity() {
     private fun abrirCadastro() {
         val textCadastro = binding.tvNovoPorAqui
         textCadastro.setOnClickListener {
-
             val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
-
         }
     }
 
@@ -60,10 +54,8 @@ class FormLogin : AppCompatActivity() {
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail, etSenha).addOnCompleteListener {
             if(it.isSuccessful) {
-
                 Toast.makeText(this, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
                 abrirListaFilmes()
-
             } else {
                 val erro = it
                 when {
@@ -78,20 +70,16 @@ class FormLogin : AppCompatActivity() {
     }
 
     private fun abrirListaFilmes() {
-
         val intent = Intent(this, ListaFilmesActivity::class.java)
         startActivity(intent)
         finish()
-
     }
 
     private fun verificaCadastroUsuarioAtivo() {
         val usuarioCadastrado = FirebaseAuth.getInstance().currentUser
 
         if(usuarioCadastrado != null) {
-
             abrirListaFilmes()
-
         }
     }
 
