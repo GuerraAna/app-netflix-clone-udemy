@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.GridLayoutManager
+import br.com.netflixcloneudemy.adapter.FilmesAdapter
 import br.com.netflixcloneudemy.databinding.ActivityListaFilmesBinding
+import br.com.netflixcloneudemy.model.addFilmes
 import com.google.firebase.auth.FirebaseAuth
 
-class ListaFilmesActivity : AppCompatActivity() {
+class ListaFilmes : AppCompatActivity() {
 
     private lateinit var binding: ActivityListaFilmesBinding
 
@@ -16,6 +19,10 @@ class ListaFilmesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListaFilmesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val recycler_filmes = binding.firstRecyclerView
+        recycler_filmes.adapter = FilmesAdapter(addFilmes())
+        recycler_filmes.layoutManager = GridLayoutManager(applicationContext, 3)
 
     }
 

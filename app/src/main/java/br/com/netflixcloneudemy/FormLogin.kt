@@ -70,7 +70,7 @@ class FormLogin : AppCompatActivity() {
     }
 
     private fun abrirListaFilmes() {
-        val intent = Intent(this, ListaFilmesActivity::class.java)
+        val intent = Intent(this, ListaFilmes::class.java)
         startActivity(intent)
         finish()
     }
