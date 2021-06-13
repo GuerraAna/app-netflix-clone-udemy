@@ -15,4 +15,8 @@
     <string name="bt_cadastrar">Cadastrar</string>
     <!--String Menu Lista Filmes Netflix-->
     <string name="menu_netflix_deslogar">Deslogar usuario</string>
+    <string name="tv_descricao_witcher">O mutante Geralt e um cacador de monstros que luta para encontrar seu lugar num undo onde as pessoas, muitas vezes, sao mais perversas que as criaturas selvagens.</string>
+    <string name="tv_title_witcher">The Witcher</string>
+    <string name="tv_produtores_witcher">Estrelando: Henry Cavill, Anya Chalotra, Freya Allan.\nCriacao: Laren Schmidt Hissrich.</string>
+    <string name="tv_mais_videos">Mais Filmes e Series</string>
 </resources>
