@@ -25,6 +25,8 @@ class DetalhesFilmeWitcher : AppCompatActivity() {
         recyclerViewListaFilmesDetalhes()
 
         imagensFirebasePicasso()
+
+        playParaVideoWitcher()
     }
 
     private fun toolbarVoltarListaFilmes() {
@@ -46,5 +48,13 @@ class DetalhesFilmeWitcher : AppCompatActivity() {
     private fun imagensFirebasePicasso() {
         val capaFilmeWitcher = "https://firebasestorage.googleapis.com/v0/b/netflix-clone-udemy.appspot.com/o/video.jpg?alt=media&token=360cc268-5630-4ab0-80b9-d3b4265cc666"
         Picasso.get().load(capaFilmeWitcher).fit().into(binding.ivVideoWitcher)
+    }
+
+    private fun playParaVideoWitcher() {
+        val buttonPlayVideo = binding.ivStartVideoWitcher
+        buttonPlayVideo.setOnClickListener {
+            val intent = Intent(this, Video::class.java)
+            startActivity(intent)
+        }
     }
 }
